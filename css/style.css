@@ -13,6 +13,7 @@
   --bg-warm:   #f3cfdc;
   --bg-card:   #ffffff;
   --accent:    #2c2c2a;
+  --ink-deep:  #3b2a34;
   --brand-accent: #e01b63;
   --brand-accent-soft: rgba(224, 27, 99, 0.12);
   --brand-glow: rgba(224, 27, 99, 0.08);
@@ -53,7 +54,7 @@ a { color: inherit; text-decoration: none; }
 
 /* ── Header / Nav (shared across pages) ───────── */
 .site-topbar {
-  background: var(--ink);
+  background: var(--ink-deep);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -257,7 +258,7 @@ nav a.active {
 /* ── Verdict strip ─────────────────────────────── */
 .verdict-strip {
   padding: 1.35rem 0;
-  background: var(--ink);
+  background: var(--ink-deep);
   color: #faf9f6;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -329,6 +330,12 @@ main > .verdict-strip:first-child {
   width: 100%;
   height: 220px;
   border-radius: var(--radius-md);
+}
+
+.editorial-media-image {
+  display: block;
+  object-fit: cover;
+  border: 1px solid var(--rule);
 }
 
 /* ── About highlight section ───────────────────── */
@@ -623,6 +630,7 @@ main > .verdict-strip:first-child {
   border: 1px solid var(--rule);
   border-radius: var(--radius-bubble);
   overflow: hidden;
+  cursor: pointer;
   transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
 }
 
@@ -638,6 +646,12 @@ main > .verdict-strip:first-child {
 
 .post-card-link {
   display: block;
+}
+
+.post-card-link:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 4px;
+  border-radius: var(--radius-bubble);
 }
 
 .post-card-media {
@@ -771,7 +785,7 @@ main > .verdict-strip:first-child {
 
 /* ── Footer ───────────────────────────────────── */
 .home-footer {
-  background: var(--ink);
+  background: var(--ink-deep);
   padding: 2rem 0;
 }
 
@@ -924,6 +938,48 @@ main > .verdict-strip:first-child {
   margin-top: 0.08rem;
   font-size: 10px;
   color: var(--ink-muted);
+}
+
+/* ── Manga Click Effects ─────────────────────── */
+.click-pop {
+  animation: manga-click-pop 220ms ease-out;
+}
+
+.manga-impact-ring {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  margin-top: -7px;
+  border: 2px solid rgba(224, 27, 99, 0.7);
+  border-radius: 999px;
+  pointer-events: none;
+  z-index: 2000;
+  animation: manga-impact-ring 280ms ease-out forwards;
+}
+
+@keyframes manga-click-pop {
+  0% { transform: scale(1); }
+  35% { transform: scale(0.965) rotate(-0.35deg); }
+  100% { transform: scale(1); }
+}
+
+@keyframes manga-impact-ring {
+  0% {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(4.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .click-pop,
+  .manga-impact-ring {
+    animation: none !important;
+  }
 }
 
 @media (max-width: 640px) {

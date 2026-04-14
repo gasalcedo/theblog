@@ -16,6 +16,7 @@
       '  <button type="button" class="featured-manga-modal__close" data-modal-close aria-label="Close popup">×</button>' +
       '  <img class="featured-manga-modal__image" src="" alt="" />' +
       '  <h3 id="featured-manga-modal-title" class="featured-manga-modal__title"></h3>' +
+      '  <p class="featured-manga-modal__price"></p>' +
       '  <p class="featured-manga-modal__note"></p>' +
       "</div>";
 
@@ -24,6 +25,7 @@
     var dialog = modal.querySelector(".featured-manga-modal__dialog");
     var image = modal.querySelector(".featured-manga-modal__image");
     var title = modal.querySelector(".featured-manga-modal__title");
+    var price = modal.querySelector(".featured-manga-modal__price");
     var note = modal.querySelector(".featured-manga-modal__note");
     var activeCard = null;
 
@@ -32,6 +34,7 @@
       image.src = card.getAttribute("data-panel-src") || "";
       image.alt = card.getAttribute("data-panel-alt") || "";
       title.textContent = card.getAttribute("data-panel-title") || "Featured manga";
+      price.textContent = card.getAttribute("data-panel-price") || "Price varies by edition";
       note.textContent = card.getAttribute("data-panel-note") || "";
 
       modal.hidden = false;
