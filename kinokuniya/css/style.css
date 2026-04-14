@@ -788,7 +788,24 @@ body.modal-open {
 
 .footer-row {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.footer-row--split {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.footer-brand-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
 }
 
 .footer-brand {
@@ -797,6 +814,28 @@ body.modal-open {
   font-weight: 600;
   color: rgba(250, 249, 246, 0.5);
   line-height: 1.2;
+}
+
+.post-footer .author-social--footer {
+  margin-top: 0;
+  gap: 0.4rem;
+}
+
+.post-footer .author-social--footer .author-social-links {
+  gap: 0.5rem 0.75rem;
+}
+
+.post-footer .author-social-link--icon-on-dark:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.footer-whisper {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(250, 249, 246, 0.38);
+  max-width: 320px;
+  line-height: 1.5;
 }
 
 .footer-copyright {
@@ -880,5 +919,81 @@ main > .verdict-strip:first-child {
     flex-wrap: wrap;
     gap: 1rem 1.25rem;
     justify-content: flex-end;
+  }
+
+  .footer-row--split {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ── Site Audio Player ───────────────────────── */
+.site-audio-player {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: min(92vw, 420px);
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  border: 1px solid var(--rule);
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.16);
+}
+
+.site-audio-player__toggle {
+  border: 1px solid var(--rule);
+  background: var(--ink);
+  color: #faf9f6;
+  border-radius: 999px;
+  padding: 0.38rem 0.82rem;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.site-audio-player__meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.site-audio-player__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-mid);
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-audio-player__progress {
+  width: 100%;
+  accent-color: var(--brand-accent);
+}
+
+.site-audio-player__times {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.08rem;
+  font-size: 10px;
+  color: var(--ink-muted);
+}
+
+@media (max-width: 640px) {
+  .site-audio-player {
+    right: 10px;
+    left: 10px;
+    bottom: 10px;
+    width: auto;
   }
 }

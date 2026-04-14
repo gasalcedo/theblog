@@ -137,4 +137,5 @@
   } else {
     initAboutCarousels();
   }
+
 })();
