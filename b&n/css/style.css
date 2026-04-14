@@ -1,0 +1,26 @@
+@import url("../../kinokuniya/css/style.css");
+
+.story-pagination {
+  justify-content: space-between;
+}
+
+/* No Kinokuniya photos on this page — placeholders until B&N shots exist */
+.story-inline-placeholder {
+  display: block;
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-md);
+}
+
+.featured-manga .placeholder-bn {
+  min-height: 150px;
+  border: 1px solid var(--rule);
+}
+
+.related-story-thumb-placeholder {
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}

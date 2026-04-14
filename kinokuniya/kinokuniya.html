@@ -7,30 +7,40 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
 </head>
 <body>
 
-  <header class="post-topbar">
+  <header class="site-topbar">
     <div class="page-shell topbar-inner">
-      <a href="../index.html" class="brand-mark">Manga Finder.io</a>
+      <a href="../index.html" class="brand-mark">
+        <span class="brand-title">Manga<br>Finder.io</span>
+        <span class="brand-tagline">USF · real shelves, real receipts</span>
+      </a>
       <nav>
         <a href="../index.html">Home</a>
         <a href="kinokuniya.html" class="active">Kinokuniya</a>
-        <a href="../b&amp;n/b&amp;n.html">Barnes &amp; Noble</a>
-        <a href="../greenapple/greenapple.html">Green Apple Books</a>
-        <a href="../about/about.html">About me</a>
+        <a href="../b&amp;n/b&amp;n.html">B&amp;N</a>
+        <a href="../greenapple/greenapple.html">Green Apple</a>
       </nav>
     </div>
   </header>
 
-  <main class="page-shell">
+  <main>
+    <section class="verdict-strip" aria-label="Kinokuniya summary">
+      <div class="page-shell verdict-inner">
+        <p class="verdict-label">Shelf verdict · Kinokuniya</p>
+        <p class="verdict-text">If you want imports, depth, and room to wander the aisles, this is the stop. Yes, it is worth the bus ride from USF — just budget extra time (and maybe extra cash).</p>
+      </div>
+    </section>
 
+    <div class="page-shell">
     <a href="../index.html" class="post-back-link">← Back to all posts</a>
 
     <div class="post-layout">
       <article class="story-panel">
-        <p class="post-kicker">Store Review · Japantown</p>
+        <p class="post-kicker">Store Review · Kinokuniya</p>
         <h1>Exploring Kinokuniya in San Francisco</h1>
 
         <div class="story-meta">
@@ -38,25 +48,78 @@
           <span>Gabe S. · March 31, 2026 · 5 min read</span>
         </div>
 
-        <!-- Replace src with real image -->
-        <div class="story-hero placeholder-kino"></div>
+        <img src="img/store2.jpg" alt="Books Kinokuniya storefront in Japantown." class="story-hero-image" />
 
         <p>Right in the center of Japantown is Kinokuniya. It is no doubt one of the best places in San Francisco to buy manga in person and it's not just any ordinary bookstore for me. It is definitely somewhere you would actually want to spend time browsing, discovering, and getting lost in the sea of shelves of manga.</p>
 
         <p>Everything is sorted by genre and series, which makes it easy to move between popular titles and more niche finds. Whether you're looking for something mainstream or something harder to find, the layout makes browsing feel natural instead of overwhelming.</p>
 
+        <figure class="story-inline-media">
+          <img src="img/hallway2.jpg" alt="Manga aisles with English and Japanese section signage." class="story-inline-image" />
+          <figcaption>English and Japanese releases sit side by side — follow the shelf labels.</figcaption>
+        </figure>
+
         <blockquote>If you go beyond the main aisles, you'll start to notice sections that are easy to miss at first.</blockquote>
 
         <p>Art books, Japanese magazines, stationery, and smaller collections are tucked into corners that reward you for slowing down and exploring. For anyone studying near USF, this is worth the bus ride to Japantown.</p>
 
-        <!-- Replace with real inline image -->
-        <div class="story-inline-media placeholder-kino">
-          <span>The manga shelves, sorted by series</span>
-        </div>
+        <figure class="story-inline-media">
+          <img src="img/downstairs1.jpg" alt="Main floor with manga downstairs signage and display tables." class="story-inline-image story-inline-image--tall" />
+          <figcaption>Manga lives downstairs — the main floor still holds art, design, and gift-table energy.</figcaption>
+        </figure>
 
         <p>It's time to address the elephant in the room with how many of us illegally pirate and access manga for free through sites like mangadex. The problem at hand is scanlations which are fan translations of manga made available on the internet. What is worse about scanlations is that they don't support the original creators and publishers at all in any way, shape or form.</p>
 
         <p>Every truth has a sad reality and that is we live in a capitalist world. Nothing is free and you have to earn it, thus you should pay for your manga. We should get used to supporting original manga creators since this is what they enjoy doing and the least we can do is support them financially to express our gratitude for their hard work. Also supporting official translations is very important, at least to me.</p>
+
+        <section class="featured-manga" aria-labelledby="featured-manga-heading">
+          <h2 id="featured-manga-heading" class="featured-manga-title">Featured on the shelves</h2>
+          <p class="featured-manga-lede">A few series I noticed stocked deep on my visit — good signs if you are hunting volumes in person.</p>
+          <div class="featured-manga-grid">
+            <article
+              class="featured-manga-card"
+              data-featured-manga
+              data-panel-src="img/onepiece-panels.png"
+              data-panel-alt="One Piece manga panel collage."
+              data-panel-title="One Piece"
+              data-panel-note="Gear 5 era chaos and iconic action beats."
+            >
+              <div class="featured-manga-media">
+                <img src="img/onepiece1.jpg" alt="One Piece omnibus editions on shelf." loading="lazy" decoding="async" />
+              </div>
+              <h3 class="featured-manga-name">One Piece</h3>
+              <p class="featured-manga-note">Omnibus stacks were full — easy to jump in or fill gaps.</p>
+            </article>
+            <article
+              class="featured-manga-card"
+              data-featured-manga
+              data-panel-src="img/bluelock.jpg"
+              data-panel-alt="Blue Lock manga panel."
+              data-panel-title="Blue Lock"
+              data-panel-note="High-intensity striker moments from Blue Lock."
+            >
+              <div class="featured-manga-media">
+                <img src="img/bluelock.jpg" alt="Blue Lock manga on display." loading="lazy" decoding="async" />
+              </div>
+              <h3 class="featured-manga-name">Blue Lock</h3>
+              <p class="featured-manga-note">Sports-shonen energy, front-facing displays.</p>
+            </article>
+            <article
+              class="featured-manga-card"
+              data-featured-manga
+              data-panel-src="img/sololeveling.jpg"
+              data-panel-alt="Solo Leveling manga panel."
+              data-panel-title="Solo Leveling"
+              data-panel-note="Shadow-heavy power-up visuals and boss fights."
+            >
+              <div class="featured-manga-media">
+                <img src="img/sololeveling.jpg" alt="Solo Leveling volumes on shelf." loading="lazy" decoding="async" />
+              </div>
+              <h3 class="featured-manga-name">Solo Leveling</h3>
+              <p class="featured-manga-note">Popular pickup — worth checking which volumes are in stock.</p>
+            </article>
+          </div>
+        </section>
 
         <div class="visit-notes-card">
           <p class="visit-notes-label">Tips before you go</p>
@@ -79,8 +142,19 @@
         <div class="rail-card">
           <p class="rail-card-title">Store information</p>
 
-          <!-- Swap for a real Google Maps embed iframe -->
-          <div class="store-map-box placeholder-map"></div>
+          <div class="store-map-widget">
+            <div
+              class="store-map-canvas"
+              data-store-map
+              data-lat="37.7857"
+              data-lng="-122.4213"
+              data-zoom="16"
+              role="img"
+              aria-label="Map: Kinokuniya Books, 1581 Webster St, San Francisco"
+            ></div>
+            <p class="store-map-attrib">Map © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> · Tiles © <a href="https://carto.com/attributions" target="_blank" rel="noopener noreferrer">CARTO</a></p>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Kinokuniya+1581+Webster+St+San+Francisco+CA" class="store-map-open" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>
+          </div>
 
           <table class="store-facts-table">
             <tbody>
@@ -127,31 +201,53 @@
           </div>
           <div class="related-story-list">
             <a href="../b&amp;n/b&amp;n.html" class="related-story-card">
-              <div class="related-story-thumb placeholder-bn"></div>
+              <span class="related-story-thumb-placeholder placeholder-bn" aria-hidden="true"></span>
               <div class="related-story-meta">
-                <p class="related-story-title">Does Barnes &amp; Noble hold up for manga fans?</p>
+                <p class="related-story-title">Barnes &amp; Noble in San Bruno</p>
                 <p class="related-story-date">March 26, 2026</p>
               </div>
             </a>
             <a href="../greenapple/greenapple.html" class="related-story-card">
-              <div class="related-story-thumb placeholder-ga"></div>
+              <img src="../greenapple/img/IMG_8837.jpg" alt="" class="related-story-thumb-img" width="48" height="48" loading="lazy" decoding="async" />
               <div class="related-story-meta">
-                <p class="related-story-title">Green Apple Books, with a small manga section worth knowing</p>
+                <p class="related-story-title">Green Apple Books on Clement</p>
                 <p class="related-story-date">March 29, 2026</p>
               </div>
             </a>
           </div>
         </div>
 
+        <div class="rail-card">
+          <div class="author-social author-social--rail" aria-label="Gabe S. on social media">
+            <span class="author-social-label">About the author</span>
+            <p class="rail-author-name">Gabe S.</p>
+            <div class="author-social-links">
+              <a class="author-social-link author-social-link--icon" href="https://github.com/gasalcedo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="../img/icons/github.png" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              </a>
+              <a class="author-social-link author-social-link--icon" href="https://www.instagram.com/gabes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="../img/icons/instagram.png" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              </a>
+            </div>
+          </div>
+        </div>
+
       </aside>
+    </div>
     </div>
   </main>
 
   <footer class="post-footer">
-    <div class="page-shell footer-row">
-      <a href="../index.html" class="footer-brand">Manga<br>Finder.io</a>
+    <div class="page-shell">
+      <div class="footer-row">
+        <a href="../index.html" class="footer-brand">Manga<br>Finder.io</a>
+      </div>
+      <p class="footer-copyright">© 2026 Gabe Salcedo. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="../js/store-map.js"></script>
+  <script src="../js/featured-manga-modal.js"></script>
 </body>
 </html>

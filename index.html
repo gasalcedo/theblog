@@ -7,19 +7,21 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <header class="home-topbar">
+  <header class="site-topbar">
     <div class="page-shell topbar-inner">
-      <a href="index.html" class="brand-mark">Manga<br>Finder.io</a>
+      <a href="index.html" class="brand-mark">
+        <span class="brand-title">Manga<br>Finder.io</span>
+        <span class="brand-tagline">USF · real shelves, real receipts</span>
+      </a>
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="kinokuniya/kinokuniya.html">Kinokuniya</a>
-        <a href="b&amp;n/b&amp;n.html">Barnes &amp; Noble</a>
-        <a href="greenapple/greenapple.html">Green Apple Books</a>
-        <a href="about/about.html">About me</a>
+        <a href="b&amp;n/b&amp;n.html">B&amp;N</a>
+        <a href="greenapple/greenapple.html">Green Apple</a>
       </nav>
     </div>
   </header>
@@ -28,21 +30,28 @@
     <section class="home-hero">
       <div class="page-shell hero-grid">
         <div class="hero-copy">
-          <p class="hero-kicker">A field guide for USF readers</p>
-          <h1>Where to buy manga near the University of San Francisco</h1>
-          <p class="hero-summary">Physical manga is worth hunting for. I reviewed three stores within reach of campus because flipping pages is different.</p>
+          <p class="hero-kicker">Field notes from someone who still buys ink on paper</p>
+          <h1>Where to hunt manga near USF without wasting a Saturday</h1>
+          <p class="hero-summary">Three stores, three afternoons, one overstuffed backpack. I went in person, compared shelves and prices, and wrote down what actually matters when you are trying to build a collection on a student budget.</p>
           <div class="hero-actions">
-            <a href="kinokuniya/kinokuniya.html" class="cta-primary">Read the guides</a>
-            <a href="about/about.html" class="cta-secondary">About this blog</a>
+            <a href="#latest-posts" class="cta-primary">Hit the shelves <span class="cta-chevron" aria-hidden="true">↓</span></a>
           </div>
         </div>
-        <div class="hero-media placeholder"></div>
+        <div class="hero-media hero-media--accent placeholder"></div>
+      </div>
+    </section>
+
+    <section class="verdict-strip" aria-label="Summary">
+      <div class="page-shell verdict-inner">
+        <p class="verdict-label">The short version</p>
+        <p class="verdict-text">If you want depth and imports, take the bus to Japantown. If you want convenience, B&amp;N works. If you want indie vibes and a tight curated shelf, Green Apple is worth the trek.</p>
       </div>
     </section>
 
     <section class="editorial-note">
       <div class="page-shell editorial-grid">
         <div class="editorial-copy">
+          <p class="editorial-rant-label">Unpopular opinion, held loudly</p>
           <p>It's time to address the elephant in the room with how many of us illegally pirate and access manga for free through sites like mangadex. The problem at hand is scanlations which are fan translations of manga made available on the internet. What is worse about scanlations is that they don't support the original creators and publishers at all in any way, shape or form.</p>
           <p>Every truth has a sad reality and that is we live in a capitalist world. Nothing is free and you have to earn it, thus you should pay for your manga. We should get used to supporting original manga creators since this is what they enjoy doing and the least we can do is support them financially.</p>
         </div>
@@ -50,60 +59,135 @@
       </div>
     </section>
 
-    <section class="post-feed">
+    <section class="about-highlight">
+      <div class="page-shell about-grid">
+        <div class="about-portrait-wrap">
+          <div
+            class="about-carousel"
+            data-about-carousel
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Photos of Gabe S."
+            tabindex="0"
+          >
+            <p class="sr-only" aria-live="polite" data-carousel-live>Image 1 of 3</p>
+            <div class="about-carousel-viewport">
+              <div class="about-carousel-track" data-carousel-track>
+                <figure class="about-carousel-slide">
+                  <img src="./img/gabeholdmanga.JPG" alt="Gabe S. in a bookstore aisle." width="520" height="650" loading="eager" decoding="async" />
+                </figure>
+                <figure class="about-carousel-slide">
+                  <video
+                    src="./img/gabedance.MOV"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    aria-label="Gabe dancing in the bookstore"
+                  ></video>
+                </figure>
+                <figure class="about-carousel-slide">
+                  <img src="./kinokuniya/img/store2.jpg" alt="Gabe S., casual portrait." width="520" height="650" loading="lazy" decoding="async" />
+                </figure>
+              </div>
+            </div>
+            <div class="about-carousel-toolbar">
+              <button type="button" class="about-carousel-btn" data-carousel-prev aria-label="Previous photo">‹</button>
+              <div class="about-carousel-dots">
+                <button type="button" class="about-carousel-dot is-active" data-carousel-dot data-index="0" aria-label="Show photo 1"></button>
+                <button type="button" class="about-carousel-dot" data-carousel-dot data-index="1" aria-label="Show photo 2"></button>
+                <button type="button" class="about-carousel-dot" data-carousel-dot data-index="2" aria-label="Show photo 3"></button>
+              </div>
+              <button type="button" class="about-carousel-btn" data-carousel-next aria-label="Next photo">›</button>
+            </div>
+          </div>
+        </div>
+        <div class="about-copy">
+          <p class="about-kicker">Who is writing this</p>
+          <h2>Hi, I am Gabe — I collect manga and I am not subtle about it.</h2>
+          <p>I created Manga Finder.io to help students find physical manga near campus without wasting time or money. I review each store in person, compare selection and pricing, and focus on what matters to readers: availability, discoverability, and overall shopping experience.</p>
+          <p>I spend a lot of time reading shonen, seinen, and modern titles, and I care about supporting official releases and creators. This blog is my practical guide for manga fans who want clear recommendations from someone who actively buys, reads, and compares manga in San Francisco.</p>
+          <div class="author-social" aria-label="Gabe S. on social media">
+            <span class="author-social-label">Find me</span>
+            <div class="author-social-links">
+              <a class="author-social-link author-social-link--icon" href="https://github.com/gasalcedo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="./img/icons/github.png" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              </a>
+              <a class="author-social-link author-social-link--icon" href="https://www.instagram.com/gabes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="./img/icons/instagram.png" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="post-feed" id="latest-posts">
       <div class="page-shell">
         <div class="feed-header">
-          <span class="feed-kicker">Latest posts</span>
-          <a href="#" class="feed-view-all">See all →</a>
+          <span class="feed-kicker">Shelf reports</span>
+          <span class="feed-note">That is the full tour for now.</span>
         </div>
         <div class="post-grid">
 
-          <article class="post-card">
-            <a href="kinokuniya/kinokuniya.html" class="post-card-link">
-              <div class="post-card-media placeholder-kino"></div>
+          <article class="post-card post-card--featured">
+            <a href="./kinokuniya/kinokuniya.html" class="post-card-link">
+              <div class="post-card-media placeholder-kino">
+                <img src="./kinokuniya/img/store2.jpg" alt="Inside Kinokuniya manga shelves." class="post-card-image" />
+                <span class="post-card-badge">Start here</span>
+              </div>
               <div class="post-card-body">
-                <p class="post-card-kicker">Store Review</p>
+                <p class="post-card-kicker">Shelf report · Kinokuniya</p>
                 <h3 class="post-card-title">Exploring Kinokuniya in San Francisco</h3>
-                <p class="post-card-summary">Right in the center of Japantown is Kinokuniya. It is no doubt the most accessible to USF students.</p>
+                <p class="post-card-summary">The obvious first stop: huge selection, easy to lose an hour, and yes, you will probably buy more than you planned.</p>
                 <div class="post-card-meta">
                   <div class="avatar">GS</div>
                   <span class="author">Gabe S.</span>
                   <span class="dot">·</span>
-                  <span class="date">March 31, 2026</span>
+                  <span class="date"><time datetime="2026-03-31">Mar 31, 2026</time></span>
+                  <span class="dot">·</span>
+                  <span class="read-time">~5 min</span>
                 </div>
               </div>
             </a>
           </article>
 
           <article class="post-card">
-            <a href="b&amp;n/b&amp;n.html" class="post-card-link">
+            <a href="./b%26n/b%26n.html" class="post-card-link">
               <div class="post-card-media placeholder-bn"></div>
               <div class="post-card-body">
-                <p class="post-card-kicker">Store Review</p>
-                <h3 class="post-card-title">Does Barnes &amp; Noble hold up for manga fans?</h3>
-                <p class="post-card-summary">The manga section is smaller than you'd hope, but surprises are there.</p>
+                <p class="post-card-kicker">Field notes · chain run</p>
+                <h3 class="post-card-title">Barnes &amp; Noble in San Bruno</h3>
+                <p class="post-card-summary">The practical superstore run: English catalog, membership math, and a trip you can squeeze between classes.</p>
                 <div class="post-card-meta">
                   <div class="avatar">GS</div>
                   <span class="author">Gabe S.</span>
                   <span class="dot">·</span>
-                  <span class="date">March 26, 2026</span>
+                  <span class="date"><time datetime="2026-03-26">Mar 26, 2026</time></span>
+                  <span class="dot">·</span>
+                  <span class="read-time">~5 min</span>
                 </div>
               </div>
             </a>
           </article>
 
           <article class="post-card">
-            <a href="greenapple/greenapple.html" class="post-card-link">
-              <div class="post-card-media placeholder-ga"></div>
+            <a href="./greenapple/greenapple.html" class="post-card-link">
+              <div class="post-card-media placeholder-ga">
+                <img src="./greenapple/img/IMG_8848.jpg" alt="Inside Green Apple Books shelves." class="post-card-image" loading="lazy" decoding="async" />
+              </div>
               <div class="post-card-body">
-                <p class="post-card-kicker">Store Review</p>
-                <h3 class="post-card-title">Green Apple Books, with a small manga section worth knowing</h3>
-                <p class="post-card-summary">Indie bookstore energy with their own curated manga shelf. Picks are thoughtful and staff recs are genuine.</p>
+                <p class="post-card-kicker">Curated corner · the Ave</p>
+                <h3 class="post-card-title">Green Apple Books on Clement</h3>
+                <p class="post-card-summary">Indie bookstore hours: used finds, staff picks, and a manga bay worth checking whenever you are nearby.</p>
                 <div class="post-card-meta">
                   <div class="avatar">GS</div>
                   <span class="author">Gabe S.</span>
                   <span class="dot">·</span>
-                  <span class="date">March 29, 2026</span>
+                  <span class="date"><time datetime="2026-03-29">Mar 29, 2026</time></span>
+                  <span class="dot">·</span>
+                  <span class="read-time">~5 min</span>
                 </div>
               </div>
             </a>
@@ -115,10 +199,27 @@
   </main>
 
   <footer class="home-footer">
-    <div class="page-shell footer-row">
-      <a href="index.html" class="footer-brand">Manga<br>Finder.io</a>
+    <div class="page-shell">
+      <div class="footer-row footer-row--split">
+        <div class="footer-brand-wrap">
+          <a href="index.html" class="footer-brand">Manga<br>Finder.io</a>
+          <div class="author-social author-social--footer" aria-label="Gabe S. on social media">
+            <div class="author-social-links">
+              <a class="author-social-link author-social-link--icon author-social-link--icon-on-dark" href="https://github.com/gasalcedo" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="./img/icons/github_alt.png" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              </a>
+              <a class="author-social-link author-social-link--icon author-social-link--icon-on-dark" href="https://www.instagram.com/gabes/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <img src="./img/icons/instagram_alt.png" alt="" width="24" height="24" loading="lazy" decoding="async" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <p class="footer-whisper">Paid for with ramen money. Buy official when you can.</p>
+      </div>
+      <p class="footer-copyright">© 2026 Gabe Salcedo. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="js/script.js" defer></script>
 </body>
 </html>
